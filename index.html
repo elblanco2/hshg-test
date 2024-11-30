@@ -39,6 +39,17 @@
             font-weight: 500;
         }
 
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
         p {
             color: var(--secondary-color);
             font-size: 1.1rem;
@@ -52,6 +63,57 @@
             box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
             margin-bottom: 1rem;
         }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background-color: white;
+            border-radius: 0.25rem;
+            padding: 1.25rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.25rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +124,43 @@
     </div>
     <div class="container">
         <div class="card">
-            <p>This is a simple welcome page that we'll be enhancing soon!</p>
+            <h2>About Us</h2>
+            <p>We are a passionate team dedicated to creating amazing web experiences. Our goal is to help businesses and individuals achieve their online presence through beautiful and functional websites.</p>
+        </div>
+
+        <h2>Our Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Our websites look great on all devices, from mobile phones to desktop computers.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Modern Technology</h3>
+                <p>We use the latest web technologies to ensure your site is fast and efficient.</p>
+            </div>
+            <div class="feature-card">
+                <h3>User Experience</h3>
+                <p>Focus on creating intuitive and engaging user experiences.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </div>
         </div>
     </div>
 </body>
